@@ -5,19 +5,19 @@ $(document).ready(function(){
         var tasks = JSON.parse(localStorage.getItem('tasks'));
         if (tasks) {
             tasks.forEach(function(task) {
-                addTaskToList(task.text, task.estado, task.dueDate); // Modificado para incluir la fecha de vencimiento
+                addTaskToList(task.text, task.estado, task.dueDate); 
             });
         }
     }
 
     // Función para agregar una nueva tarea a la lista y al localStorage
-    function addTaskToList(taskText, estado, fechaVencimiento) { // Modificado para incluir la fecha de vencimiento
+    function addTaskToList(taskText, estado, fechaVencimiento) { 
         const listaTareas = $('#taskList');
         const tarea = $("<li class='tarea'><p>" + taskText + "</p></li>");
         const editar = $("<button class='btn editButton'>Editar</button>");
         const eliminar = $("<button class='btn deleteButton'>Eliminar</button>");
         const completa = $("<button class='btn completeButton'>Completada</button>");
-        const fechaVenc = $("<span class='dueDate'>" + fechaVencimiento + "</span>"); // Cambiado a una etiqueta <p> para que no sea editable
+        const fechaVenc = $("<span class='dueDate'>" + fechaVencimiento + "</span>"); 
         
         tarea.attr('estado', estado);
 
@@ -29,22 +29,22 @@ $(document).ready(function(){
         tarea.append(editar);
         tarea.append(eliminar);
         tarea.append(completa);
-        tarea.append(fechaVenc); // Agrega el campo de fecha de vencimiento a la tarea
+        tarea.append(fechaVenc); 
     }
 
     // Función para agregar una nueva tarea
     $('#addTaskButton').click(function(){
         var newTask = $('#newTaskInput').val();
-        var dueDate = $('#dueDateInput').val(); // Obtén la fecha de vencimiento
+        var dueDate = $('#dueDateInput').val();
         if(newTask.trim() !== '' && dueDate !== ''){
             addTaskToList(newTask, 'incompleta', dueDate); // Pasa la fecha de vencimiento a la función addTaskToList
 
             var tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-            tasks.push({ text: newTask, estado: 'incompleta', dueDate: dueDate }); // Agrega la fecha de vencimiento a la tarea
+            tasks.push({ text: newTask, estado: 'incompleta', dueDate: dueDate }); 
             localStorage.setItem('tasks', JSON.stringify(tasks));
 
             $('#newTaskInput').val('');
-            $('#dueDateInput').val(''); // Limpia el campo de fecha de vencimiento después de agregar la tarea
+            $('#dueDateInput').val(''); 
         } else {
             alert('Por favor, ingresa el nombre de la tarea y la fecha de vencimiento.');
         }
@@ -64,7 +64,7 @@ $(document).ready(function(){
 
         // Actualizar el estado en localStorage
         var tasks = JSON.parse(localStorage.getItem('tasks'));
-        var taskText = $task.find('p').text() // Elimina los espacios en blanco alrededor del texto
+        var taskText = $task.find('p').text() 
         var taskIndex = tasks.findIndex(task => task.text.trim() === taskText);
         
         // Verificar si la tarea existe en el array tasks
