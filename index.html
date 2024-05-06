@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Añadir Tarea</h1>
+        <div class="anadir-tarea">
+            <input type="text" id="newTaskInput" placeholder="Escribe una nueva tarea" />
+            <input type="date" id="dueDateInput" />
+            <button id="addTaskButton">Agregar Tarea</button>
+        </div>
+        
+
+        <h1>Lista de Tareas</h1>
+        <div id="taskFilters">
+            <p>Filtrat tareas por: </p>
+            <button id="filterAll">Todas</button>
+            <button id="filterCompleted">Completadas</button>
+            <button id="filterIncomplete">Incompletas</button>
+        </div>
+        <div id="taskList">
+            <!-- Aquí se agregarán las tareas -->
+        </div>
+    </main>
+    <footer class="contenedor">
+        <p>Desarrollador por <a href="https://github.com/germandcb/" target="_blank">@germandcb</a></p>
+    </footer>
+</body>
+</html>

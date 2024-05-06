@@ -1,0 +1,106 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.completed {
+    text-decoration: line-through;
+    background-color: #c8c8c8;
+}
+
+.contenedor {
+    width: min(90%, 70rem);
+    margin: 0 auto;
+}
+footer p {
+    text-align: center;
+}
+main h1 {
+    text-align: center;
+}
+.anadir-tarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+input {
+    padding: 1rem 0.5rem;
+}
+#newTaskInput {
+    border-radius: 1rem;
+}
+#addTaskButton {
+    padding: 1rem 2rem;
+    margin: 0;
+    border-radius: 10rem;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+#taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.tarea {
+    display: block;
+    border: 1px solid #c8c8c8;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    position: relative;
+}
+.btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+}
+.editButton:hover {
+    color: orange;
+}
+.deleteButton:hover {
+    color: red;
+}
+.completeButton:hover {
+    color: green;
+}
+.edit {
+    display: block;
+    width: 100%;
+}
+.edit:focus-visible {
+    border: transparent 0px solid;
+    margin: 1rem 0;
+    border-radius: 1rem;
+}
+
+/* Estilos para filtro de tareas */
+#taskFilters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+#taskFilters > button {
+    padding: 0.8rem 4rem;
+    border: none;
+    border-radius: 10rem;
+}
+.dueDate {
+    position:absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0.5rem 0.5rem;
+    color: gray;
+    font-size: 1rem;
+    font-style: italic;
+}
+p {
+    font-size: 1.6rem;
+}
