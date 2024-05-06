@@ -1,4 +1,6 @@
-## Debe agregar código ccs para resaltar las tareas creadas en la pagina y es libre de ajustar lo visual lo mejor que pueda, pero debe cumplir lo siguientes  funcionabilidades:
+## Ejercicio js y almacenamiento Local
+
+Debe agregar código ccs para resaltar las tareas creadas en la pagina y es libre de ajustar lo visual lo mejor que pueda, pero debe cumplir lo siguientes  funcionabilidades:
 
     Guardar las tareas en localStorage: Permitir que las tareas agregadas se guarden en el almacenamiento local del navegador, de modo que al recargar la página, las tareas persistan.
 
